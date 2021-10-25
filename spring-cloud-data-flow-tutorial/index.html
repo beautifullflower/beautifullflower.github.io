@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Spring Cloud Data Flow Tutorial, Local, cloud foundry, and kubernetes. In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform.">
+
+   	
+<title>44 Simple Spring cloud data flow tutorial for Darden | All Flower Design</title>
+<meta name="url" content="https://picflower.recipefood.net/spring-cloud-data-flow-tutorial/" />
+<meta property="og:url" content="https://picflower.recipefood.net/spring-cloud-data-flow-tutorial/">
+<meta property="article:author" content="Venus"> 
+<meta name="author" content="Venus">
+<meta name="geo.region" content="US">
+<meta name="geo.region" content="GB">
+<meta name="geo.region" content="CA">
+<meta name="geo.region" content="AU">
+<meta name="geo.region" content="IT">
+<meta name="geo.region" content="NL">
+<meta name="geo.region" content="DE">
+<link rel="canonical" href="https://picflower.recipefood.net/spring-cloud-data-flow-tutorial/">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://code.jquery.com">
+<link rel="dns-prefetch" href="https://code.jquery.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://picflower.recipefood.net/assets/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://picflower.recipefood.net/assets/css/main.css">
+<link rel="stylesheet" href="https://picflower.recipefood.net/assets/css/theme.css">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+    
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "44 Simple Spring cloud data flow tutorial for Darden",
+    "headline": "44 Simple Spring cloud data flow tutorial for Darden",
+    "alternativeHeadline": "",
+    "description": "spring cloud data flow tutorial Batch file ingest in cf\/k8s in this demonstration, you will learn how to create a data processing application using spring batch which will then be run within spring cloud data flow. When doing so, the admin application can either run itself on cloud foundry, or on another installation (e.g.",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/picflower.recipefood.net\/spring-cloud-data-flow-tutorial\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Venus"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Venus"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Venus"
+    },
+    "copyrightHolder" : "All Flower Design",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-08-15T23:06:27.00Z",
+    "datePublished": "2021-08-15T23:06:27.00Z",
+    "dateModified": "2021-08-15T23:06:27.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "All Flower Design",
+        "url": "https://picflower.recipefood.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/picflower.recipefood.net\/logo.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "https://picflower.recipefood.net/logo.png",
+    "url" : "https:\/\/picflower.recipefood.net\/spring-cloud-data-flow-tutorial\/",
+    "wordCount" : "1351",
+    "genre" : [ "Decor" ],
+    "keywords" : [ "Spring" , "cloud" , "data" , "flow" , "tutorial" ]
+}
+</script>
+
+</head>
+  <body>    
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="https://picflower.recipefood.net/"><span style="text-transform: capitalize;font-weight: bold;">All Flower Design</strong></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               
+               <li class="nav-item"><a class="nav-link" href="https://picflower.recipefood.net/contact/">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://picflower.recipefood.net/dmca/">Dmca</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://picflower.recipefood.net/privacy-policy/">Privacy Policy</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://picflower.recipefood.net/about/">About</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://picflower.recipefood.net/categories/balcony/" title="Balcony">Balcony</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://picflower.recipefood.net/categories/bedroom/" title="Bedroom">Bedroom</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://picflower.recipefood.net/categories/kitchen/" title="Kitchen">Kitchen</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://picflower.recipefood.net/categories/living-room/" title="Living Room">Living Room</a></li></ul>
+        </div>
+    </div>
+    </nav>
+    <main role="main" class="site-content">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold"><span class="catlist"><a class="sscroll text-danger" href="https://picflower.recipefood.net/categories/living-room"/>Living Room</a> . </span></p>
+                    <h1 class="display-4 mb-4 article-headline">44 Simple Spring cloud data flow tutorial for Darden</h1>
+                    <div class="d-flex align-items-center">
+                        <small class="ml-3">Written by Venus <span class="text-muted d-block mt-1">Aug 15, 2021 · <span class="reading-time">7 min read</span></span></small>
+                    </div>
+                </div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://i.pinimg.com/originals/20/4f/d4/204fd4b84e5754a2d6277ba6fa74d8f0.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" alt="44 Simple Spring cloud data flow tutorial for Darden"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-lg pt-4 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <article class="article-post">
+            <p>spring cloud data flow tutorial Batch file ingest in cf/k8s in this demonstration, you will learn how to create a data processing application using spring batch which will then be run within spring cloud data flow. When doing so, the admin application can either run itself on cloud foundry, or on another installation (e.g.</p>
+
+<!--html tag code -->
+<p><strong>Spring Cloud Data Flow Tutorial</strong>, Local, cloud foundry, and kubernetes. In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform. Spring cloud data flow architecture the architecture for spring cloud data flow is separated into a number of distinct components.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/75/3d/ce/753dcebd8b4baa116398af6e17a5a43a.jpg" alt="Spring Brushes by" title="Spring Brushes by" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Spring Brushes by From pinterest.com</p>
+<p><strong>Another Article :</strong>
+<span class="navi text-left"><a class="badge badge-dark" href="/inspirational-hibiscus-flower-quotes/">Inspirational hibiscus flower quotes</a></span>
+<span class="navi text-left"><a class="badge badge-primary" href="/indian-blanket-flower-seeds/">Indian blanket flower seeds</a></span>
+<span class="navi text-left"><a class="badge badge-danger" href="/indirect-cash-flow-statement-template-excel/">Indirect cash flow statement template excel</a></span></p>
+<p>In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform. Local, cloud foundry, and kubernetes. When doing so, the admin application can either run itself on cloud foundry, or on another installation (e.g. What is a data pipeline? Spring cloud data flow is ready to be used for a range of data processing use cases like simple import/export, etl processing, event streaming, and predictive analytics.</p>
+<h3 id="long-lived-applications-require-stream-applications">Long lived applications require stream applications.</h3><p>Spring cloud is a spring module that provides the rad (rapid application development) feature to the spring framework. Spring cloud is a spring module that provides the rad (rapid application development) feature to the spring framework. Spring cloud tutorial provides basic and advanced concepts of spring and spring boot framework. In the first article of the series, we introduced spring cloud data flow‘s architectural component and how to use it to create a streaming data pipeline. In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/736x/b8/22/6b/b8226b328f1428c937ac30a8fed874f6.jpg" alt="If You are Going to Cheat on Your Color Space&amp;hellip; Invent" title="If You are Going to Cheat on Your Color Space&amp;hellip; Invent" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>If You are Going to Cheat on Your Color Space&hellip; Invent What is a data pipeline? In this tutorial we will be implementing spring cloud config using git. What is a data pipeline? A flow that receives an event from an input, perform some action(s) and send the result to an output. Local, cloud foundry, and kubernetes. Pipelines, in this case, are spring boot applications that are built with the use of spring cloud stream or spring cloud task frameworks.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/96/c6/7e/96c67ee0357a6693e1330144b9f572d7.jpg" alt="2 cards using 1 stamp and die set Favorite things by" title="2 cards using 1 stamp and die set Favorite things by" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>2 cards using 1 stamp and die set Favorite things by If you are new to data flow, we Batch file ingest in cf/k8s in this demonstration, you will learn how to create a data processing application using spring batch which will then be run within spring cloud data flow. Spring cloud data flow (scdf) provides tools to build streaming and batch data pipelines. Most of these samples use the shell. Create your own binder using nats as broker; Our spring cloud tutorial is designed for beginners and professionals both.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/736x/c3/fc/6d/c3fc6ddcbeb3a827adde76561f489364--cleveland-beauty.jpg" alt="IMG_20150404_113752 (4) Cloud computing, Data center" title="IMG_20150404_113752 (4) Cloud computing, Data center" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>IMG_20150404_113752 (4) Cloud computing, Data center Spring cloud data flow architecture the architecture for spring cloud data flow is separated into a number of distinct components. Data flow supports three platforms out of the box: To access the wizard, go to file | new | project, and select spring initializr. Create your own binder using nats as broker; In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform. Logical view of a streaming pipeline we have a source.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/c3/fc/6d/c3fc6ddcbeb3a827adde76561f489364.jpg" alt="IMG_20150404_113752 (4) Cloud computing, Data center" title="IMG_20150404_113752 (4) Cloud computing, Data center" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>IMG_20150404_113752 (4) Cloud computing, Data center In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform. In previous tutorial we implemented spring cloud config using native mode. From here, we can design more sophisticated and complex pipelines. In this tutorial will be using spring cloud config and hashicorp vault to manage secrets and protect sensitive data. To access the wizard, go to file | new | project, and select spring initializr. Hashicorp vault is a platform to secure, store, and tightly control access to tokens, passwords, certificates, encryption keys for protecting sensitive data and other secrets in a dynamic infrastructure.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/736x/20/1e/66/201e669bedc3a1129f508cfa1fb5fc13--diy-flower-crown-flower-crowns.jpg" alt="Pin by Ashley Spallone on Festy Diy flower crown, Flower" title="Pin by Ashley Spallone on Festy Diy flower crown, Flower" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>Pin by Ashley Spallone on Festy Diy flower crown, Flower In this tutorial we will be implementing spring cloud config using git. Most of these samples use the shell. This data pipelines come in two flavors, streaming and batch data pipelines. Mater spring cloud data flow architecture, data processing, and dsl. In the first article of the series, we introduced spring cloud data flow‘s architectural component and how to use it to create a streaming data pipeline. A flow that receives an event from an input, perform some action(s) and send the result to an output.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/75/3d/ce/753dcebd8b4baa116398af6e17a5a43a.jpg" alt="Spring Brushes by" title="Spring Brushes by" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>Spring Brushes by To access the wizard, go to file | new | project, and select spring initializr. We had also seen what need spring cloud config fulfills. Pipelines, in this case, are spring boot applications that are built with the use of spring cloud stream or spring cloud task frameworks. In previous tutorial we implemented spring cloud config using native mode. Our spring cloud tutorial is designed for beginners and professionals both. Mater spring cloud data flow architecture, data processing, and dsl.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/01/96/51/019651fca6072d019c3c9522c8a350ad.jpg" alt="Introducing Microsoft Flow (eBook) Microsoft excel" title="Introducing Microsoft Flow (eBook) Microsoft excel" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>Introducing Microsoft Flow (eBook) Microsoft excel Pipelines, in this case, are spring boot applications that are built with the use of spring cloud stream or spring cloud task frameworks. The spring cloud data flow shell is a spring boot application that connects to the data flow server’s rest api and supports a dsl that simplifies the process of defining a stream or task and managing its lifecycle. To access the wizard, go to file | new | project, and select spring initializr. Also we will be implementing examples of using gateway with eureka and hystrix. When doing so, the admin application can either run itself on cloud foundry, or on another installation (e.g. Most of these samples use the shell.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/b8/22/6b/b8226b328f1428c937ac30a8fed874f6.png" alt="If You are Going to Cheat on Your Color Space&amp;hellip; Invent" title="If You are Going to Cheat on Your Color Space&amp;hellip; Invent" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>If You are Going to Cheat on Your Color Space&hellip; Invent Stream processing using spring cloud data flow spring cloud tutorial. What is spring cloud data flow? In this spring cloud gateway tutorial series we will understand what is a microservices gateway api and implement it using spring cloud gateway. Spring cloud data flow can be used to deploy modules in a cloud foundry environment. Data flow supports three platforms out of the box: Our spring cloud tutorial is designed for beginners and professionals both.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/e0/0a/0b/e00a0b0dc4d9ce82fe732df3a08e22cd.jpg" alt="human hand topology 11 Topology" title="human hand topology 11 Topology" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>human hand topology 11 Topology In order to use spring cloud data flow, you will need to choose what platform you want to run it on and install the server components on that platform. A flow that receives an event from an input, perform some action(s) and send the result to an output. Mater spring cloud data flow architecture, data processing, and dsl. In this tutorial we will be implementing spring cloud config using git. This tutorial is an introduction to spring cloud data flow which allows us to orchestate streaming and/or batch data pipelines. Logical view of a streaming pipeline we have a source.</p>
+<p><img loading="lazy" width="100%" src="https://picflower.recipefood.net/img/placeholder.svg" data-src="https://i.pinimg.com/originals/20/4f/d4/204fd4b84e5754a2d6277ba6fa74d8f0.jpg" alt="Pin by Corey on Chartjunk Chart, Data visualization" title="Pin by Corey on Chartjunk Chart, Data visualization" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>Pin by Corey on Chartjunk Chart, Data visualization Our spring cloud tutorial is designed for beginners and professionals both. See the spring cloud data flow internals ; What is a data pipeline? Spring cloud is a spring module that provides the rad (rapid application development) feature to the spring framework. This tutorial is an introduction to spring cloud data flow which allows us to orchestate streaming and/or batch data pipelines. Spring cloud tutorial provides basic and advanced concepts of spring and spring boot framework.</p>
+<p>Please support us by sharing this posts to your favorite social media accounts like Facebook, Instagram and so on or you can also save this blog page with the title spring cloud data flow tutorial by using Ctrl + D for devices a laptop with a Windows operating system or Command + D for laptops with an Apple operating system. If you use a smartphone, you can also use the drawer menu of the browser you are using. Whether it&rsquo;s a Windows, Mac, iOS or Android operating system, you will still be able to bookmark this website.</p>
+<center>
+   <script type="text/javascript">
+	atOptions = {
+		'key' : '044478bac56eb613662b93ef204db084',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.creativeformatsnetwork.com/044478bac56eb613662b93ef204db084/invoke.js"></scr' + 'ipt>');
+</script>
+</center>
+            </article>
+            <div class="row"><div class="posts-image" style="width:50%;"><a style="margin:5px;" href="/gentle-flow-yoga-with-adriene/">&laquo;&laquo;&nbsp;13 Recomended Gentle flow yoga with adriene for Bouquet</a></div>
+    <div class="posts-image" style="width:50%"><a style="margin:5px;" href="/high-flow-oxygen-concentrator/">37 New High flow oxygen concentrator for Ideas&nbsp;&raquo;&raquo;</a></div></div>
+            
+            <div class="mb-4">
+                <span class="taglist"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container pt-4 pb-4">
+    
+    <h5 class="font-weight-bold spanborder"><span>Related Article</span></h5>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/purple-daisy-flower-name/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/2a/1e/c3/2a1ec3992e7fee81a707281c6f368eef.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/purple-daisy-flower-name/">44 New Purple daisy flower name for Darden</a>
+                        </h2>
+                        <small class="text-muted">Jul 29 . 11 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/state-flower-of-north-carolina-facts/"><img height="80" src="/img/placeholder.svg" data-src="https://s-media-cache-ak0.pinimg.com/736x/49/9e/c4/499ec478fca6747f5eba340b05b81762.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/state-flower-of-north-carolina-facts/">46 Garden State flower of north carolina facts for Ideas</a>
+                        </h2>
+                        <small class="text-muted">Dec 03 . 10 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/ceramic-floral-wall-decor/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/88/34/0d/88340d43becac34ce0a5db0a5a3fa624.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/ceramic-floral-wall-decor/">23 Garden Ceramic floral wall decor for Ideas</a>
+                        </h2>
+                        <small class="text-muted">May 29 . 12 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/flower-child-menu-dallas/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/90/52/5b/90525baa65fbf18eea6dad396a9477f6.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/flower-child-menu-dallas/">19 Simple Flower child menu dallas for Wedding</a>
+                        </h2>
+                        <small class="text-muted">Feb 13 . 4 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/georgia-state-flower-bird-and-tree/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/a6/60/d6/a660d632b4f76860af9842617a741ebd.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/georgia-state-flower-bird-and-tree/">36 Beautiful Georgia state flower bird and tree for Wallpaper</a>
+                        </h2>
+                        <small class="text-muted">Feb 26 . 9 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/christmas-cactus-flower-plant/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/64/90/a9/6490a9d21415f4f6fdb742ac27aa5b58.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/christmas-cactus-flower-plant/">31 Garden Christmas cactus flower plant for Rose </a>
+                        </h2>
+                        <small class="text-muted">Nov 16 . 10 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/flower-drying-near-me/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/db/c4/9b/dbc49b561e1edc653430134307009e36.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/flower-drying-near-me/">18 Recomended Flower drying near me for Ideas</a>
+                        </h2>
+                        <small class="text-muted">Sep 16 . 11 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/purple-bell-shaped-flowering-shrub/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/42/31/4f/42314f3bbcddb5c24dcd5afef0685e59.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/purple-bell-shaped-flowering-shrub/">21 Beautiful Purple bell shaped flowering shrub for Beautiful</a>
+                        </h2>
+                        <small class="text-muted">Oct 21 . 10 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/flower-field-landscape-pictures/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/90/10/8d/90108d01499771d3c6e47284147c6b78.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/flower-field-landscape-pictures/">27 Simple Flower field landscape pictures for Clipart </a>
+                        </h2>
+                        <small class="text-muted">Nov 23 . 9 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/blue-columbine-flower-drawing/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/ec/7c/78/ec7c78fb8f97f575d0eecbbfd72c8eb7.jpg" onerror="this.onerror=null;this.src='https:\/\/picflower.recipefood.net\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/blue-columbine-flower-drawing/">43 Garden Blue columbine flower drawing for Darden</a>
+                        </h2>
+                        <small class="text-muted">Jul 15 . 10 min read</small>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+    </main>    <script async="async" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script async="async" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script async="async" src="https://picflower.recipefood.net/assets/js/theme.js"></script>
+    <script>function init(){var imgDefer=document.getElementsByTagName('img');for (var i=0; i<imgDefer.length; i++){if(imgDefer[i].getAttribute('data-src')){imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));}}}window.onload=init;</script>
+    
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div><span style="text-transform: capitalize;"><a href="https://picflower.recipefood.net/">All Flower Design</a> Copyright &copy; 2021.</span></div>
+            
+        </div>
+        </div>
+    </footer>
+<div id='fixedban' style='width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:999;-webkit-transform:translateZ(0);'>
+    <div>
+    <a id='close-fixedban' onclick='document.getElementById(&quot;fixedban&quot;).style.display = &quot;none&quot;;' style='cursor:pointer;'><img alt='close' src='https://yess-online.com/close.png' style='vertical-align:middle;' title='close button'/></a></div>
+    <div style='text-align:center;display:block;max-width:728px;height:auto;overflow:hidden;margin:auto'>
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '9eef197534ec11f5babb9ac320f6f185',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/9eef197534ec11f5babb9ac320f6f185/invoke.js"></scr' + 'ipt>');
+	</script>
+	</div>
+</div>
+
+
+<a href="/" alt="page hit counter" target="_blank" >
+<embed src="//s10.histats.com/521.swf"  flashvars="jver=1&acsid=4389740&domi=4"  quality="high"  width="70" height="20" name="521.swf"  align="middle" type="application/x-shockwave-flash" pluginspage="//www.macromedia.com/go/getflashplayer" wmode="transparent" /></a>
+<img  src="//sstatic1.histats.com/0.gif?4389740&101" alt="simple hit counter" border="0">
+ 
+
+
+  </body>
+</html>
